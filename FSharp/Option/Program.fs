@@ -1,4 +1,4 @@
-﻿// There is one union type of special importance in F#: Option<'a>
+// There is one union type of special importance in F#: Option<'a>
 // It looks like this:
 // type Option<'a> =
 //     | None
@@ -10,7 +10,8 @@ let validValue = Some "Neal"
 // There is no "null" in F#; instead, we use Option for most use cases involving "null" in Java.
 
 // Usage #1: a value does not exist
-let lookupId = function
+let lookupId name =
+    match name with
     | "Neal"  -> Some 1
     | "Karyl" -> Some 2
     | "Marco" -> Some 3
